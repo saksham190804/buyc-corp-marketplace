@@ -1,14 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const db = require('./database');
-
-// Auto-seed if database is empty
-const count = db.prepare('SELECT COUNT(*) as c FROM OEM_Specs').get();
-if (count.c === 0) {
-  console.log('Empty database detected, seeding...');
-  require('./seed');
-}
 
 const authRoutes = require('./routes/auth');
 const oemRoutes = require('./routes/oem');
