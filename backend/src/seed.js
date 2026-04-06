@@ -107,4 +107,4 @@ insertManyInventory(inventory);
 console.log('Marketplace Inventory seeded.');
 
 console.log('Database seeding complete!');
-if (require.main === module) process.exit(0);
+process.exit(0);
